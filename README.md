@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# Dumindu Malinga Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built with React, TypeScript, and Vite. It presents my background as an Android and software engineering undergraduate, along with my projects, skills, experience, and contact information.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The site is designed as a single-page portfolio with a dark cinematic look, theme switching, reveal-on-scroll animations, and a scroll-to-top button. The navigation links jump to each section of the page, and the main content is driven from a central portfolio data file.
 
-## React Compiler
+## Sections
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Hero banner with my name, tagline, and call-to-action links
+- About section with profile details and highlights
+- Skills section with technical skill bars and technology tags
+- Projects section featuring selected Android, Java, Flutter, and Python work
+- Experience section with academic and self-learning milestones
+- Education section with my university background and coursework
+- Contact section with email, phone, GitHub, and LinkedIn details
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- CSS-based custom styling
+- ESLint
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Featured Content
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The portfolio content is defined in [src/data/portfolio.ts](src/data/portfolio.ts). It includes:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Personal profile details and social links
+- Skill groups and technology tags
+- Project cards and filters
+- Experience timeline entries
+- Education history
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+## Preview
+
+```bash
+npm run preview
+```
+
+## Project Assets
+
+The app uses a few public assets, including the favicon, SVG icons, and hero image. The CV download link in [src/data/portfolio.ts](src/data/portfolio.ts) points to `/CV_Malinga_Bandara.pdf`, so that file should be present in [public](public) for the download button to work.
+
+## Notes
+
+The site is intended for GitHub Pages deployment, so the root files and public assets are structured for static hosting.
