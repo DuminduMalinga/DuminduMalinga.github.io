@@ -1,0 +1,118 @@
+/* ====== ABOUT — Split editorial layout ====== */
+#about {
+  position: relative;
+  overflow: hidden;
+}
+#about::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(ellipse, rgba(0,80,160,0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left: text */
+.about-text-col {}
+
+.about-section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.about-section-title .cyan { color: var(--cyan); }
+
+.about-body-text {
+  font-size: 15.5px;
+  color: var(--gray-1);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 32px;
+}
+.detail-item {
+  padding: 14px 16px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  transition: var(--ease);
+}
+.detail-item:hover { border-color: var(--border-bright); }
+.detail-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  margin-bottom: 4px;
+}
+.detail-value { font-size: 14px; font-weight: 700; color: var(--white); }
+
+/* Right: cards */
+.about-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-card {
+  padding: 24px 28px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  transition: var(--ease);
+}
+.about-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--cyan), transparent);
+  opacity: 0;
+  transition: var(--ease);
+}
+.about-card:hover::before { opacity: 1; }
+
+.about-card-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.about-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.about-card-desc {
+  font-size: 13.5px;
+  color: var(--gray-1);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .about-split { grid-template-columns: 1fr; gap: 48px; }
+}
