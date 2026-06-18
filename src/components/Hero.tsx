@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             <p className="hero-desc">{personal.bio}</p>
 
             <div className="hero-actions">
-              <a href={personal.cvUrl} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <a href={personal.cvUrl} className="btn btn-primary" download="Dumindu_Malinga_CV.pdf">
                 <DownloadIcon /> Download CV
               </a>
               <a href="#contact" className="btn btn-outline" onClick={handleContactClick}>
