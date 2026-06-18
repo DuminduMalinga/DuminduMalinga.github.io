@@ -15,7 +15,7 @@ export const personal = {
   linkedinHandle: "dumindu-malinga",
   email: "malingabandara24256@gmail.com",
   phone: "+94 77 328 6562",
-  cvUrl: "https://drive.google.com/uc?export=download&id=1HragpfAMW9kMDW97rtIfwdz0ovp-KYOz",
+  cvUrl: "/Dumindu_Malinga_CV.pdf",
 };
 
 export const roles = [
