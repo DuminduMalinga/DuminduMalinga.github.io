@@ -52,7 +52,8 @@ const Projects: React.FC = () => {
           {filtered.map((proj) => (
             <article key={proj.title} className="project-card glass-card">
               <div className="project-thumb">
-                <div className="project-thumb-bg" style={{ background: proj.gradient }}>{proj.emoji}</div>
+                <div className="project-thumb-bg" style={{ background: proj.gradient }} />
+                <img className="project-thumb-img" src={proj.image} alt={`${proj.title} preview`} loading="lazy" />
                 <div className="project-overlay">
                   {proj.links.map(link => (
                     <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="project-overlay-btn">

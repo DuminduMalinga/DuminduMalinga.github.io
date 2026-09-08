@@ -126,6 +126,7 @@ export const techTags = [
 
 export interface Project {
   emoji: string;
+  image: string;
   gradient: string;
   tags: string[];
   filterTags: string[];
@@ -137,6 +138,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     emoji: "📝",
+    image: "/projects/personal-reflection.svg",
     gradient: "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)",
     tags: ["Android", "Java", "Room DB", "Firebase"],
     filterTags: ["android", "java", "firebase"],
@@ -148,6 +150,7 @@ export const projects: Project[] = [
   },
   {
     emoji: "🎶",
+    image: "/projects/video-player.svg",
     gradient: "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
     tags: ["Android", "Flutter", "OOP"],
     filterTags: ["android"],
@@ -159,6 +162,7 @@ export const projects: Project[] = [
   },
   {
     emoji: "🚗",
+    image: "/projects/vehicle-classification.svg",
     gradient: "linear-gradient(135deg, #1a0a2e 0%, #3b1170 100%)",
     tags: ["Python", "Machine Learning", "NLP"],
     filterTags: ["python"],

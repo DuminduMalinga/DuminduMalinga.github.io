@@ -1,0 +1,83 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vehicle Classification model illustration">
+  <defs>
+    <linearGradient id="vc-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1a0a2e"/>
+      <stop offset="1" stop-color="#3b1170"/>
+    </linearGradient>
+    <linearGradient id="vc-road" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0c1022"/>
+      <stop offset="1" stop-color="#161c33"/>
+    </linearGradient>
+    <pattern id="vc-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#vc-bg)"/>
+  <rect width="640" height="360" fill="url(#vc-dots)"/>
+  <circle cx="500" cy="70" r="130" fill="#00b8d9" opacity="0.10"/>
+  <circle cx="110" cy="300" r="120" fill="#a855f7" opacity="0.14"/>
+
+  <!-- detection frame -->
+  <g transform="translate(48 52)">
+    <rect x="-8" y="-8" width="416" height="260" rx="16" fill="#020617" opacity="0.5"/>
+    <rect x="0" y="0" width="400" height="244" rx="12" fill="url(#vc-road)" stroke="#2a2350" stroke-width="2"/>
+
+    <!-- road -->
+    <path d="M0 244 L150 96 L250 96 L400 244 Z" fill="#0a0f20" opacity="0.7"/>
+    <g stroke="#3b4b7a" stroke-width="3" stroke-linecap="round" stroke-dasharray="14 12" opacity="0.7">
+      <path d="M200 240 L200 100"/>
+    </g>
+
+    <!-- corner crosshair marks -->
+    <g stroke="#00b8d9" stroke-width="2" opacity="0.5">
+      <path d="M12 12h16M12 12v16"/>
+      <path d="M388 12h-16M388 12v16"/>
+      <path d="M12 232h16M12 232v-16"/>
+      <path d="M388 232h-16M388 232v-16"/>
+    </g>
+
+    <!-- car 1 (near, big) -->
+    <g transform="translate(150 150)">
+      <rect x="-4" y="-4" width="140" height="70" rx="4" fill="none" stroke="#00b8d9" stroke-width="2.5"/>
+      <rect x="-4" y="-20" width="66" height="16" rx="3" fill="#00b8d9"/>
+      <text x="29" y="-8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700" fill="#04121a">car 0.97</text>
+      <path d="M6 44 q6 -30 26 -32 l30 0 q14 2 22 16 l20 4 q10 2 10 12 l0 0 l-138 0 z" fill="#38bdf8"/>
+      <circle cx="30" cy="46" r="9" fill="#0c1022" stroke="#cbd5f5" stroke-width="2"/>
+      <circle cx="104" cy="46" r="9" fill="#0c1022" stroke="#cbd5f5" stroke-width="2"/>
+    </g>
+
+    <!-- car 2 (far, small) -->
+    <g transform="translate(196 92)">
+      <rect x="-3" y="-3" width="58" height="30" rx="3" fill="none" stroke="#a855f7" stroke-width="2"/>
+      <rect x="-3" y="-16" width="46" height="13" rx="3" fill="#a855f7"/>
+      <text x="20" y="-6" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.5" font-weight="700" fill="#140a20">truck 0.88</text>
+      <path d="M4 20 q3 -14 12 -15 l16 0 q7 1 10 8 l8 2 q5 1 5 5 l-59 0 z" fill="#c084fc"/>
+      <circle cx="16" cy="21" r="4.5" fill="#0c1022" stroke="#e2e8f0" stroke-width="1.5"/>
+      <circle cx="44" cy="21" r="4.5" fill="#0c1022" stroke="#e2e8f0" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- neural net motif -->
+  <g transform="translate(470 120)" stroke="#00b8d9" stroke-opacity="0.5" stroke-width="1.3">
+    <line x1="16" y1="14" x2="70" y2="0"/><line x1="16" y1="14" x2="70" y2="40"/><line x1="16" y1="14" x2="70" y2="80"/>
+    <line x1="16" y1="66" x2="70" y2="0"/><line x1="16" y1="66" x2="70" y2="40"/><line x1="16" y1="66" x2="70" y2="80"/>
+    <line x1="70" y1="0" x2="120" y2="20"/><line x1="70" y1="40" x2="120" y2="20"/><line x1="70" y1="80" x2="120" y2="20"/>
+    <line x1="70" y1="0" x2="120" y2="60"/><line x1="70" y1="40" x2="120" y2="60"/><line x1="70" y1="80" x2="120" y2="60"/>
+  </g>
+  <g transform="translate(470 120)" fill="#0b1027" stroke="#00b8d9" stroke-width="1.6">
+    <circle cx="16" cy="14" r="6"/><circle cx="16" cy="66" r="6"/>
+    <circle cx="70" cy="0" r="6"/><circle cx="70" cy="40" r="6"/><circle cx="70" cy="80" r="6"/>
+    <circle cx="120" cy="20" r="6" fill="#00b8d9"/><circle cx="120" cy="60" r="6" fill="#00b8d9"/>
+  </g>
+
+  <!-- tag chips -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">
+    <rect x="48" y="312" width="66" height="24" rx="12" fill="#00b8d9"/>
+    <text x="81" y="328" text-anchor="middle" fill="#0b1027">Python</text>
+    <rect x="122" y="312" width="72" height="24" rx="12" fill="#e2e8f0"/>
+    <text x="158" y="328" text-anchor="middle" fill="#0b1027">YOLOv8</text>
+    <rect x="202" y="312" width="118" height="24" rx="12" fill="#a855f7"/>
+    <text x="261" y="328" text-anchor="middle" fill="#f8fafc">Machine Learning</text>
+  </g>
+</svg>
