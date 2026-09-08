@@ -1,0 +1,126 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Audio Player app illustration">
+  <defs>
+    <linearGradient id="ap-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#042f2e"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="ap-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0b1620"/>
+      <stop offset="1" stop-color="#0a1a1c"/>
+    </linearGradient>
+    <linearGradient id="ap-art" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#00b8d9"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <pattern id="ap-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#ap-bg)"/>
+  <rect width="640" height="360" fill="url(#ap-dots)"/>
+  <circle cx="500" cy="70" r="130" fill="#00b8d9" opacity="0.12"/>
+  <circle cx="120" cy="310" r="120" fill="#2dd4bf" opacity="0.12"/>
+
+  <!-- now-playing panel -->
+  <g transform="translate(70 60)">
+    <rect x="-8" y="-8" width="456" height="256" rx="18" fill="#020617" opacity="0.5"/>
+    <rect x="0" y="0" width="440" height="240" rx="14" fill="url(#ap-panel)" stroke="#1f3a3a" stroke-width="2"/>
+
+    <!-- album art -->
+    <rect x="20" y="20" width="90" height="90" rx="12" fill="url(#ap-art)"/>
+    <g transform="translate(65 65)" fill="#0b1620">
+      <circle cx="0" cy="0" r="26" fill="#0b1620" opacity="0.35"/>
+      <path d="M-4 12a8 8 0 1 0 8-8V-14l14-4v6l-10 3v17" fill="none" stroke="#0b1620" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- track meta -->
+    <text x="126" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Now Playing</text>
+    <text x="126" y="64" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#94b8b5">track_07.mp3 &#183; local library</text>
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#04121a">
+      <rect x="126" y="78" width="58" height="20" rx="10" fill="#00b8d9"/>
+      <text x="155" y="92" text-anchor="middle">Pitch +2</text>
+      <rect x="190" y="78" width="66" height="20" rx="10" fill="#2dd4bf"/>
+      <text x="223" y="92" text-anchor="middle">Speed 1.25x</text>
+      <rect x="262" y="78" width="52" height="20" rx="10" fill="#ffffff" opacity="0.85"/>
+      <text x="288" y="92" text-anchor="middle">Loop</text>
+    </g>
+
+    <!-- waveform -->
+    <g transform="translate(20 128)">
+      <g fill="#1f3a3a">
+        <rect x="0"   y="14" width="4" height="12" rx="2"/><rect x="8"   y="6"  width="4" height="28" rx="2"/>
+        <rect x="16"  y="16" width="4" height="8"  rx="2"/><rect x="24"  y="0"  width="4" height="40" rx="2"/>
+        <rect x="32"  y="10" width="4" height="20" rx="2"/><rect x="40"  y="4"  width="4" height="32" rx="2"/>
+        <rect x="48"  y="18" width="4" height="4"  rx="2"/><rect x="56"  y="8"  width="4" height="24" rx="2"/>
+        <rect x="64"  y="2"  width="4" height="36" rx="2"/><rect x="72"  y="14" width="4" height="12" rx="2"/>
+        <rect x="80"  y="6"  width="4" height="28" rx="2"/><rect x="88"  y="16" width="4" height="8"  rx="2"/>
+        <rect x="96"  y="10" width="4" height="20" rx="2"/><rect x="104" y="2"  width="4" height="36" rx="2"/>
+        <rect x="112" y="12" width="4" height="16" rx="2"/><rect x="120" y="6"  width="4" height="28" rx="2"/>
+        <rect x="128" y="16" width="4" height="8"  rx="2"/><rect x="136" y="4"  width="4" height="32" rx="2"/>
+        <rect x="144" y="14" width="4" height="12" rx="2"/><rect x="152" y="8"  width="4" height="24" rx="2"/>
+        <rect x="160" y="0"  width="4" height="40" rx="2"/><rect x="168" y="12" width="4" height="16" rx="2"/>
+        <rect x="176" y="6"  width="4" height="28" rx="2"/><rect x="184" y="16" width="4" height="8"  rx="2"/>
+        <rect x="192" y="10" width="4" height="20" rx="2"/><rect x="200" y="2"  width="4" height="36" rx="2"/>
+        <rect x="208" y="14" width="4" height="12" rx="2"/><rect x="216" y="8"  width="4" height="24" rx="2"/>
+        <rect x="224" y="4"  width="4" height="32" rx="2"/><rect x="232" y="16" width="4" height="8"  rx="2"/>
+        <rect x="240" y="10" width="4" height="20" rx="2"/><rect x="248" y="6"  width="4" height="28" rx="2"/>
+        <rect x="256" y="14" width="4" height="12" rx="2"/><rect x="264" y="2"  width="4" height="36" rx="2"/>
+        <rect x="272" y="12" width="4" height="16" rx="2"/><rect x="280" y="8"  width="4" height="24" rx="2"/>
+        <rect x="288" y="16" width="4" height="8"  rx="2"/><rect x="296" y="4"  width="4" height="32" rx="2"/>
+        <rect x="304" y="14" width="4" height="12" rx="2"/><rect x="312" y="8"  width="4" height="24" rx="2"/>
+        <rect x="320" y="0"  width="4" height="40" rx="2"/><rect x="328" y="12" width="4" height="16" rx="2"/>
+        <rect x="336" y="6"  width="4" height="28" rx="2"/><rect x="344" y="16" width="4" height="8"  rx="2"/>
+        <rect x="352" y="10" width="4" height="20" rx="2"/><rect x="360" y="4"  width="4" height="32" rx="2"/>
+        <rect x="368" y="14" width="4" height="12" rx="2"/><rect x="376" y="8"  width="4" height="24" rx="2"/>
+        <rect x="384" y="2"  width="4" height="36" rx="2"/><rect x="392" y="14" width="4" height="12" rx="2"/>
+      </g>
+      <!-- played portion -->
+      <g fill="#00b8d9">
+        <rect x="0"   y="14" width="4" height="12" rx="2"/><rect x="8"   y="6"  width="4" height="28" rx="2"/>
+        <rect x="16"  y="16" width="4" height="8"  rx="2"/><rect x="24"  y="0"  width="4" height="40" rx="2"/>
+        <rect x="32"  y="10" width="4" height="20" rx="2"/><rect x="40"  y="4"  width="4" height="32" rx="2"/>
+        <rect x="48"  y="18" width="4" height="4"  rx="2"/><rect x="56"  y="8"  width="4" height="24" rx="2"/>
+        <rect x="64"  y="2"  width="4" height="36" rx="2"/><rect x="72"  y="14" width="4" height="12" rx="2"/>
+        <rect x="80"  y="6"  width="4" height="28" rx="2"/><rect x="88"  y="16" width="4" height="8"  rx="2"/>
+        <rect x="96"  y="10" width="4" height="20" rx="2"/><rect x="104" y="2"  width="4" height="36" rx="2"/>
+        <rect x="112" y="12" width="4" height="16" rx="2"/><rect x="120" y="6"  width="4" height="28" rx="2"/>
+        <rect x="128" y="16" width="4" height="8"  rx="2"/><rect x="136" y="4"  width="4" height="32" rx="2"/>
+        <rect x="144" y="14" width="4" height="12" rx="2"/><rect x="152" y="8"  width="4" height="24" rx="2"/>
+      </g>
+    </g>
+
+    <!-- progress bar -->
+    <rect x="20" y="182" width="400" height="4" rx="2" fill="#1f3a3a"/>
+    <rect x="20" y="182" width="156" height="4" rx="2" fill="#00b8d9"/>
+    <circle cx="176" cy="184" r="6" fill="#e2f7f5"/>
+    <text x="20" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#94b8b5">01:58</text>
+    <text x="420" y="204" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#94b8b5">04:44</text>
+
+    <!-- transport -->
+    <g transform="translate(200 214)" fill="#cbeeeb">
+      <path d="M-2 0l-12 8 12 8zM-14 0l-12 8 12 8z"/>
+      <circle cx="24" cy="8" r="16" fill="#00b8d9"/>
+      <path d="M18 0l14 8-14 8z" fill="#04121a"/>
+      <path d="M50 0l12 8-12 8zM62 0l12 8-12 8z"/>
+    </g>
+  </g>
+
+  <!-- record / favorite badge -->
+  <g transform="translate(430 70)">
+    <rect x="0" y="0" width="140" height="42" rx="12" fill="#0b1620" stroke="#00b8d9" stroke-opacity="0.35" stroke-width="1.5"/>
+    <circle cx="24" cy="21" r="9" fill="#ef4444"/>
+    <text x="42" y="18" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700" fill="#e2e8f0">Record + FX</text>
+    <text x="42" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#94b8b5">Save &#183; favorites</text>
+  </g>
+
+  <!-- tag chips -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">
+    <rect x="70" y="316" width="70" height="24" rx="12" fill="#00b8d9"/>
+    <text x="105" y="332" text-anchor="middle" fill="#04121a">Flutter</text>
+    <rect x="148" y="316" width="58" height="24" rx="12" fill="#e2e8f0"/>
+    <text x="177" y="332" text-anchor="middle" fill="#04121a">Dart</text>
+    <rect x="214" y="316" width="118" height="24" rx="12" fill="#2dd4bf"/>
+    <text x="273" y="332" text-anchor="middle" fill="#04121a">Cross-platform</text>
+  </g>
+</svg>

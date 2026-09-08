@@ -161,6 +161,18 @@ export const projects: Project[] = [
     ],
   },
   {
+    emoji: "🎵",
+    image: "/projects/audio-player.svg",
+    gradient: "linear-gradient(135deg, #042f2e 0%, #0f766e 100%)",
+    tags: ["Flutter", "Dart", "Audio", "Cross-platform"],
+    filterTags: ["android"],
+    title: "Audio Player",
+    desc: "A cross-platform Flutter audio player for local music. Includes playback and seek controls, playlist and favorites management, audio recording, real-time waveform visualization, and live pitch/speed sound-effect presets.",
+    links: [
+      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Audio_player" },
+    ],
+  },
+  {
     emoji: "🚗",
     image: "/projects/vehicle-classification.svg",
     gradient: "linear-gradient(135deg, #1a0a2e 0%, #3b1170 100%)",
