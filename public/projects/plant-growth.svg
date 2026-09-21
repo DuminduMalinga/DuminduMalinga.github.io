@@ -1,0 +1,81 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plant Growth Analyzer illustration">
+  <defs>
+    <linearGradient id="pg-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14210f"/>
+      <stop offset="1" stop-color="#365314"/>
+    </linearGradient>
+    <linearGradient id="pg-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#101a0c"/>
+      <stop offset="1" stop-color="#131f0d"/>
+    </linearGradient>
+    <linearGradient id="pg-leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#84cc16"/>
+      <stop offset="1" stop-color="#4d7c0f"/>
+    </linearGradient>
+    <pattern id="pg-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#pg-bg)"/>
+  <rect width="640" height="360" fill="url(#pg-dots)"/>
+  <circle cx="520" cy="60" r="130" fill="#84cc16" opacity="0.12"/>
+  <circle cx="100" cy="310" r="120" fill="#a3e635" opacity="0.12"/>
+
+  <g transform="translate(70 56)">
+    <rect x="-8" y="-8" width="500" height="248" rx="18" fill="#020617" opacity="0.5"/>
+    <rect x="0" y="0" width="484" height="232" rx="14" fill="url(#pg-panel)" stroke="#33470f" stroke-width="2"/>
+
+    <!-- photo capture card -->
+    <g transform="translate(16 16)">
+      <rect x="0" y="0" width="150" height="120" rx="10" fill="#0d160a" stroke="#33470f"/>
+      <ellipse cx="75" cy="100" rx="46" ry="8" fill="#000000" opacity="0.3"/>
+      <path d="M75 96 C55 70 60 40 75 18 C90 40 95 70 75 96Z" fill="url(#pg-leaf)"/>
+      <path d="M75 96 C60 78 62 55 75 34" stroke="#365314" stroke-width="2" fill="none"/>
+      <path d="M45 60 C55 55 65 58 70 66" stroke="url(#pg-leaf)" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <path d="M105 60 C95 55 85 58 80 66" stroke="url(#pg-leaf)" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <text x="75" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#bef264">Day 14 capture</text>
+    </g>
+
+    <!-- HSV segmentation preview -->
+    <g transform="translate(184 16)">
+      <rect x="0" y="0" width="150" height="120" rx="10" fill="#0d160a" stroke="#33470f"/>
+      <path d="M75 96 C55 70 60 40 75 18 C90 40 95 70 75 96Z" fill="none" stroke="#a3e635" stroke-width="2" stroke-dasharray="4 3"/>
+      <path d="M45 60 C55 55 65 58 70 66" fill="none" stroke="#a3e635" stroke-width="2" stroke-dasharray="4 3"/>
+      <path d="M105 60 C95 55 85 58 80 66" fill="none" stroke="#a3e635" stroke-width="2" stroke-dasharray="4 3"/>
+      <text x="75" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#bef264">HSV segmentation</text>
+    </g>
+
+    <!-- metrics -->
+    <g transform="translate(352 16)" font-family="Segoe UI, Arial, sans-serif">
+      <rect x="0" y="0" width="116" height="120" rx="10" fill="#0d160a" stroke="#33470f"/>
+      <text x="10" y="18" font-size="10" font-weight="700" fill="#ecfccb">Metrics</text>
+      <text x="10" y="38" font-size="8" fill="#a3e635">Height</text>
+      <text x="10" y="50" font-size="12" font-weight="800" fill="#f7fee7">18.4 cm</text>
+      <text x="10" y="68" font-size="8" fill="#a3e635">Leaf Count</text>
+      <text x="10" y="80" font-size="12" font-weight="800" fill="#f7fee7">7</text>
+      <text x="10" y="98" font-size="8" fill="#a3e635">Health</text>
+      <text x="10" y="110" font-size="12" font-weight="800" fill="#f7fee7">Good</text>
+    </g>
+
+    <!-- growth trend line -->
+    <g transform="translate(16 152)">
+      <polyline points="0,60 60,50 120,44 180,28 240,20 300,6" fill="none" stroke="#84cc16" stroke-width="3" stroke-linecap="round"/>
+      <g fill="#a3e635">
+        <circle cx="0" cy="60" r="3"/><circle cx="60" cy="50" r="3"/><circle cx="120" cy="44" r="3"/>
+        <circle cx="180" cy="28" r="3"/><circle cx="240" cy="20" r="3"/><circle cx="300" cy="6" r="3"/>
+      </g>
+      <text x="0" y="76" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#a3e635">Growth trend across daily captures</text>
+    </g>
+  </g>
+
+  <!-- tag chips -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">
+    <rect x="70" y="312" width="62" height="24" rx="12" fill="#84cc16"/>
+    <text x="101" y="328" text-anchor="middle" fill="#0d160a">Python</text>
+    <rect x="140" y="312" width="70" height="24" rx="12" fill="#e2e8f0"/>
+    <text x="175" y="328" text-anchor="middle" fill="#0d160a">OpenCV</text>
+    <rect x="218" y="312" width="96" height="24" rx="12" fill="#a3e635"/>
+    <text x="266" y="328" text-anchor="middle" fill="#0d160a">Data Science</text>
+  </g>
+</svg>

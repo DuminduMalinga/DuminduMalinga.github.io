@@ -33,14 +33,15 @@ const About: React.FC = () => {
             </div>
             <div className="reveal reveal-delay-1">
               <p className="about-body-text">
-                Hi, I'm Malinga — a Software Engineering undergraduate with a deep
-                passion for mobile application development. I love turning complex
-                problems into clean, practical solutions.
+                Hi, I'm Dumindu — a third-year IT undergraduate with a deep passion
+                for mobile application development. I love turning complex problems
+                into clean, practical Flutter apps.
               </p>
               <p className="about-body-text">
-                My focus is Android development using Java and modern Android architecture
-                components. I care deeply about UI/UX design principles, ensuring every
-                app I build not only works well but feels great to use.
+                My focus is Flutter and Dart, backed by Firebase authentication and
+                real-time data, plus native Android (Java) experience. I care deeply
+                about UI/UX design, ensuring every app I build not only works well
+                but feels great to use.
               </p>
             </div>
             <div className="about-details reveal reveal-delay-2">

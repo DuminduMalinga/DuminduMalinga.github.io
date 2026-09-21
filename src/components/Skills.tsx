@@ -40,7 +40,7 @@ const Skills: React.FC = () => {
 
         <div className="skills-grid">
           {skillGroups.map((group, gi) => (
-            <div key={group.title} className={`skill-panel glass-card reveal reveal-delay-${gi + 1}`}>
+            <div key={group.title} className={`skill-panel glass-card reveal reveal-delay-${gi + 1}${gi === 1 ? ' skill-panel-alt' : ''}`}>
               <div className="skill-panel-header">
                 <div className="skill-panel-icon">{group.emoji}</div>
                 <p className="skill-panel-title">{group.title}</p>

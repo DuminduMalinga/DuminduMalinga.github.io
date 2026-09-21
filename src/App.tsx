@@ -38,7 +38,29 @@ const App: React.FC = () => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-    return () => obs.disconnect();
+
+    // Fallback: a fast scroll (End key, Page Down mashing, dragging the
+    // scrollbar) can move the viewport past a section in a single frame,
+    // so the observer never sees it intersect and it stays opacity:0.
+    // Poll via rAF (not scroll/resize events, which some viewport-change
+    // paths never dispatch) and force-reveal anything already in or past view.
+    let rafId: number;
+    const revealPassed = () => {
+      const remaining = document.querySelectorAll('.reveal:not(.visible)');
+      if (remaining.length === 0) return;
+      remaining.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('visible');
+        }
+      });
+      rafId = requestAnimationFrame(revealPassed);
+    };
+    rafId = requestAnimationFrame(revealPassed);
+
+    return () => {
+      obs.disconnect();
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (

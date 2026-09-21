@@ -21,13 +21,16 @@
   --cyan-2:  #00d4f5;
   --blue:    #0077b6;
   --blue-2:  #023e8a;
+  --violet:  #8b5cf6;
+  --violet-2: #a78bfa;
   --white:   #f0f8ff;
-  --gray-1:  #8eaabf;
-  --gray-2:  #4a6680;
+  --gray-1:  #a5c2d6;
+  --gray-2:  #6c8ba5;
   --gray-3:  #1e3348;
 
   --glow-cyan:  0 0 80px rgba(0,184,217,0.18);
   --glow-blue:  0 0 120px rgba(0,119,182,0.25);
+  --glow-violet: 0 0 100px rgba(139,92,246,0.22);
   --glow-sm:    0 0 30px rgba(0,184,217,0.20);
 
   --font-display: 'Inter', sans-serif;

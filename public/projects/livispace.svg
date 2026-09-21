@@ -1,0 +1,77 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LiviSpace interior design app illustration">
+  <defs>
+    <linearGradient id="ls-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="ls-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#12102a"/>
+      <stop offset="1" stop-color="#170f2b"/>
+    </linearGradient>
+    <linearGradient id="ls-room" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <pattern id="ls-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#ls-bg)"/>
+  <rect width="640" height="360" fill="url(#ls-dots)"/>
+  <circle cx="510" cy="60" r="130" fill="#a78bfa" opacity="0.14"/>
+  <circle cx="110" cy="310" r="120" fill="#f472b6" opacity="0.12"/>
+
+  <!-- room preview panel -->
+  <g transform="translate(70 56)">
+    <rect x="-8" y="-8" width="330" height="248" rx="18" fill="#020617" opacity="0.5"/>
+    <rect x="0" y="0" width="314" height="232" rx="14" fill="url(#ls-panel)" stroke="#3a2e63" stroke-width="2"/>
+
+    <!-- floor plan / room mock -->
+    <rect x="16" y="16" width="282" height="140" rx="10" fill="url(#ls-room)" opacity="0.85"/>
+    <g stroke="#170f2b" stroke-width="2" opacity="0.6">
+      <line x1="16" y1="86" x2="298" y2="86"/>
+      <line x1="150" y1="16" x2="150" y2="156"/>
+    </g>
+    <g fill="#170f2b" opacity="0.75">
+      <rect x="34" y="30" width="60" height="36" rx="4"/>
+      <rect x="180" y="100" width="90" height="40" rx="4"/>
+      <circle cx="230" cy="45" r="16"/>
+    </g>
+    <text x="16" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#f5f3ff">AI Layout Suggestion</text>
+    <text x="16" y="194" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c4b5fd">Living room &#183; modern minimal &#183; 9-screen flow</text>
+
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#170f2b">
+      <rect x="16" y="204" width="70" height="18" rx="9" fill="#a78bfa"/>
+      <text x="51" y="216" text-anchor="middle">Upload</text>
+      <rect x="94" y="204" width="86" height="18" rx="9" fill="#f472b6"/>
+      <text x="137" y="216" text-anchor="middle">AI Process</text>
+      <rect x="188" y="204" width="70" height="18" rx="9" fill="#e2e8f0"/>
+      <text x="223" y="216" text-anchor="middle">Review</text>
+    </g>
+  </g>
+
+  <!-- screen stack indicator -->
+  <g transform="translate(420 56)">
+    <rect x="0" y="0" width="150" height="232" rx="16" fill="#12102a" stroke="#a78bfa" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect x="14" y="16" width="122" height="18" rx="6" fill="#a78bfa" opacity="0.9"/>
+    <rect x="14" y="42" width="122" height="10" rx="4" fill="#3a2e63"/>
+    <rect x="14" y="58" width="90" height="10" rx="4" fill="#3a2e63"/>
+    <rect x="14" y="82" width="122" height="60" rx="8" fill="url(#ls-room)" opacity="0.65"/>
+    <rect x="14" y="152" width="122" height="10" rx="4" fill="#3a2e63"/>
+    <rect x="14" y="168" width="70" height="10" rx="4" fill="#3a2e63"/>
+    <rect x="14" y="192" width="122" height="24" rx="8" fill="#f472b6"/>
+    <text x="75" y="208" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700" fill="#170f2b">Next Screen</text>
+    <text x="75" y="-8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c4b5fd">9 dark-themed screens</text>
+  </g>
+
+  <!-- tag chips -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">
+    <rect x="70" y="312" width="70" height="24" rx="12" fill="#a78bfa"/>
+    <text x="105" y="328" text-anchor="middle" fill="#170f2b">Flutter</text>
+    <rect x="148" y="312" width="58" height="24" rx="12" fill="#e2e8f0"/>
+    <text x="177" y="328" text-anchor="middle" fill="#170f2b">Dart</text>
+    <rect x="214" y="312" width="80" height="24" rx="12" fill="#f472b6"/>
+    <text x="254" y="328" text-anchor="middle" fill="#170f2b">AI UX</text>
+  </g>
+</svg>

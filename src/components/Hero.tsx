@@ -129,16 +129,16 @@ const Hero: React.FC = () => {
               <div className="hero-badge hero-badge-1">
                 <div className="pill-dot" />
                 <div>
-                  <div className="badge-num">4+</div>
-                  <div className="badge-label">Projects Built</div>
+                  <div className="badge-num">{stats[0].number}</div>
+                  <div className="badge-label">{stats[0].label}</div>
                 </div>
               </div>
 
               <div className="hero-badge hero-badge-2">
                 <div className="pill-dot" />
                 <div>
-                  <div className="badge-num">10+</div>
-                  <div className="badge-label">Technologies</div>
+                  <div className="badge-num">{stats[1].number}</div>
+                  <div className="badge-label">{stats[1].label}</div>
                 </div>
               </div>
 

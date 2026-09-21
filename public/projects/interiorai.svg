@@ -1,0 +1,77 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="InteriorAI interior design platform illustration">
+  <defs>
+    <linearGradient id="ia-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0c1a2e"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="ia-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0a1526"/>
+      <stop offset="1" stop-color="#0d1c30"/>
+    </linearGradient>
+    <linearGradient id="ia-model" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <pattern id="ia-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#ia-bg)"/>
+  <rect width="640" height="360" fill="url(#ia-dots)"/>
+  <circle cx="520" cy="60" r="130" fill="#38bdf8" opacity="0.12"/>
+  <circle cx="100" cy="310" r="120" fill="#818cf8" opacity="0.12"/>
+
+  <!-- browser chrome -->
+  <g transform="translate(70 50)">
+    <rect x="-8" y="-8" width="500" height="256" rx="18" fill="#020617" opacity="0.5"/>
+    <rect x="0" y="0" width="484" height="240" rx="14" fill="url(#ia-panel)" stroke="#24405e" stroke-width="2"/>
+    <g transform="translate(16 14)">
+      <circle cx="0" cy="0" r="5" fill="#f87171"/>
+      <circle cx="16" cy="0" r="5" fill="#facc15"/>
+      <circle cx="32" cy="0" r="5" fill="#4ade80"/>
+      <rect x="50" y="-8" width="300" height="16" rx="8" fill="#0a1526" stroke="#24405e"/>
+      <text x="60" y="4" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#93c5fd">interiorai.app/design/floor-plan</text>
+    </g>
+
+    <!-- 3D viewer -->
+    <g transform="translate(16 34)">
+      <rect x="0" y="0" width="300" height="130" rx="10" fill="url(#ia-model)" opacity="0.9"/>
+      <g stroke="#0a1526" stroke-width="2" fill="none" opacity="0.7">
+        <polygon points="40,100 40,40 140,20 140,80"/>
+        <polygon points="140,20 240,40 240,100 140,80"/>
+        <line x1="40" y1="100" x2="140" y2="80"/>
+        <line x1="140" y1="80" x2="240" y2="100"/>
+      </g>
+      <text x="150" y="118" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700" fill="#0a1526">Interactive 3D Viewer</text>
+    </g>
+
+    <!-- side panel: room detection -->
+    <g transform="translate(330 34)" font-family="Segoe UI, Arial, sans-serif">
+      <rect x="0" y="0" width="138" height="130" rx="10" fill="#0a1526" stroke="#24405e"/>
+      <text x="10" y="18" font-size="10" font-weight="700" fill="#e0f2fe">Room Detection</text>
+      <g font-size="8" fill="#93c5fd">
+        <rect x="10" y="28" width="118" height="14" rx="6" fill="#0f2440"/>
+        <text x="16" y="38">Living Room 98%</text>
+        <rect x="10" y="48" width="118" height="14" rx="6" fill="#0f2440"/>
+        <text x="16" y="58">Bedroom 94%</text>
+        <rect x="10" y="68" width="118" height="14" rx="6" fill="#0f2440"/>
+        <text x="16" y="78">Kitchen 91%</text>
+      </g>
+      <rect x="10" y="92" width="118" height="24" rx="8" fill="#38bdf8"/>
+      <text x="69" y="108" text-anchor="middle" font-size="9" font-weight="700" fill="#0a1526">Generate 3D</text>
+    </g>
+
+    <text x="16" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#93c5fd">Express REST API &#183; Helmet &#183; CORS &#183; rate limiting &#183; Supabase auth</text>
+  </g>
+
+  <!-- tag chips -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">
+    <rect x="70" y="316" width="52" height="24" rx="12" fill="#38bdf8"/>
+    <text x="96" y="332" text-anchor="middle" fill="#04121a">React</text>
+    <rect x="130" y="316" width="84" height="24" rx="12" fill="#e2e8f0"/>
+    <text x="172" y="332" text-anchor="middle" fill="#04121a">TypeScript</text>
+    <rect x="222" y="316" width="88" height="24" rx="12" fill="#818cf8"/>
+    <text x="266" y="332" text-anchor="middle" fill="#04121a">Supabase</text>
+  </g>
+</svg>

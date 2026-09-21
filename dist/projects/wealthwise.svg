@@ -1,0 +1,90 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WealthWise finance tracker app illustration">
+  <defs>
+    <linearGradient id="ww-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#052e16"/>
+      <stop offset="1" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="ww-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0b1f14"/>
+      <stop offset="1" stop-color="#0a1a12"/>
+    </linearGradient>
+    <linearGradient id="ww-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+    <pattern id="ww-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#ww-bg)"/>
+  <rect width="640" height="360" fill="url(#ww-dots)"/>
+  <circle cx="520" cy="60" r="130" fill="#22c55e" opacity="0.12"/>
+  <circle cx="100" cy="310" r="120" fill="#4ade80" opacity="0.12"/>
+
+  <!-- dashboard panel -->
+  <g transform="translate(70 56)">
+    <rect x="-8" y="-8" width="500" height="248" rx="18" fill="#020617" opacity="0.5"/>
+    <rect x="0" y="0" width="484" height="232" rx="14" fill="url(#ww-panel)" stroke="#1f3a28" stroke-width="2"/>
+
+    <text x="20" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#f0fdf4">This Month</text>
+    <text x="20" y="50" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#4ade80">Rs. 84,250.00</text>
+    <text x="20" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#86b598">Total balance &#183; synced with Firestore</text>
+
+    <!-- income / expense chips -->
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="600">
+      <rect x="330" y="18" width="66" height="40" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="1.2"/>
+      <text x="363" y="34" text-anchor="middle" fill="#4ade80">Income</text>
+      <text x="363" y="48" text-anchor="middle" fill="#f0fdf4" font-size="10">+21.4k</text>
+      <rect x="404" y="18" width="66" height="40" rx="10" fill="#3a0a0a" stroke="#f87171" stroke-width="1.2"/>
+      <text x="437" y="34" text-anchor="middle" fill="#fca5a5">Expense</text>
+      <text x="437" y="48" text-anchor="middle" fill="#f0fdf4" font-size="10">-9.8k</text>
+    </g>
+
+    <!-- bar chart -->
+    <g transform="translate(20 88)">
+      <g fill="url(#ww-bar)">
+        <rect x="0"   y="60" width="26" height="46" rx="6"/>
+        <rect x="40"  y="34" width="26" height="72" rx="6"/>
+        <rect x="80"  y="46" width="26" height="60" rx="6"/>
+        <rect x="120" y="10" width="26" height="96" rx="6"/>
+        <rect x="160" y="54" width="26" height="52" rx="6"/>
+        <rect x="200" y="26" width="26" height="80" rx="6"/>
+      </g>
+      <g font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#86b598">
+        <text x="13" y="118" text-anchor="middle">M</text>
+        <text x="53" y="118" text-anchor="middle">T</text>
+        <text x="93" y="118" text-anchor="middle">W</text>
+        <text x="133" y="118" text-anchor="middle">T</text>
+        <text x="173" y="118" text-anchor="middle">F</text>
+        <text x="213" y="118" text-anchor="middle">S</text>
+      </g>
+    </g>
+
+    <!-- budget ring -->
+    <g transform="translate(310 92)">
+      <circle cx="45" cy="45" r="38" fill="none" stroke="#12331f" stroke-width="10"/>
+      <circle cx="45" cy="45" r="38" fill="none" stroke="#22c55e" stroke-width="10" stroke-linecap="round"
+        stroke-dasharray="179 239" transform="rotate(-90 45 45)"/>
+      <text x="45" y="41" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="800" fill="#f0fdf4">75%</text>
+      <text x="45" y="56" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#86b598">of budget</text>
+    </g>
+  </g>
+
+  <!-- auth badge -->
+  <g transform="translate(430 40)">
+    <rect x="0" y="0" width="140" height="34" rx="12" fill="#0b1f14" stroke="#22c55e" stroke-opacity="0.35" stroke-width="1.5"/>
+    <circle cx="20" cy="17" r="7" fill="#22c55e"/>
+    <text x="34" y="21" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700" fill="#e2f7ea">Firebase Auth</text>
+  </g>
+
+  <!-- tag chips -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600">
+    <rect x="70" y="312" width="70" height="24" rx="12" fill="#22c55e"/>
+    <text x="105" y="328" text-anchor="middle" fill="#04120a">Flutter</text>
+    <rect x="148" y="312" width="58" height="24" rx="12" fill="#e2e8f0"/>
+    <text x="177" y="328" text-anchor="middle" fill="#04120a">Dart</text>
+    <rect x="214" y="312" width="108" height="24" rx="12" fill="#4ade80"/>
+    <text x="268" y="328" text-anchor="middle" fill="#04120a">Firestore</text>
+  </g>
+</svg>
