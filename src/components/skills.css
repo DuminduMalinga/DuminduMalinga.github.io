@@ -3,6 +3,7 @@
   position: relative;
   background: var(--bg-1);
   overflow: hidden;
+  padding-bottom: 60px;
 }
 #skills::before {
   content: '';
