@@ -60,6 +60,14 @@ export const aboutDetails = [
   { label: "GitHub", value: personal.githubHandle },
 ];
 
+export const aboutBadges = [
+  "🎓 3rd-Year IT Undergraduate",
+  "📱 8+ Mobile & Web Projects Shipped",
+  "🟢 Open to Internships",
+  "💼 Immediate Availability",
+  "🌍 Sri Lanka · Remote-friendly",
+];
+
 // ---- SKILLS ----
 
 export interface SkillBar {
@@ -243,6 +251,36 @@ export const projectFilters = [
   { label: "Web", value: "web" },
   { label: "Python", value: "python" },
   { label: "Firebase", value: "firebase" },
+];
+
+// ---- OPEN SOURCE ----
+
+export const githubStats = [
+  { number: "13", label: "Public Repos" },
+  { number: "5", label: "Followers" },
+  { number: "2+", label: "Years on GitHub" },
+];
+
+export interface OpenSourceRepo {
+  name: string;
+  desc: string;
+  tags: string[];
+  href: string;
+}
+
+export const openSourceRepos: OpenSourceRepo[] = [
+  {
+    name: "SkillBridge",
+    desc: "A university pilot platform (Rajarata University, Faculty of Applied Sciences) connecting student coursework with real industry requirements and project experience. React + TypeScript, Vite, Tailwind CSS v4, with separate student/company/institute dashboards.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    href: "https://github.com/DuminduMalinga/Skill_Bridge",
+  },
+  {
+    name: "Virtusa Computers — E-Commerce Web",
+    desc: "A 30-product tech retail storefront built with zero frameworks — vanilla HTML/CSS/JS. Live search, category filters, cart with localStorage persistence, and a full multi-step checkout flow.",
+    tags: ["HTML5", "CSS3", "Vanilla JS"],
+    href: "https://github.com/DuminduMalinga/E-commerce_web",
+  },
 ];
 
 // ---- EXPERIENCE ----

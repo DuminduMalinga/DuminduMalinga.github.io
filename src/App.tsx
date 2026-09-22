@@ -6,24 +6,13 @@ import Hero       from './components/Hero';
 import About      from './components/About';
 import Skills     from './components/Skills';
 import Projects   from './components/Projects';
+import OpenSource from './components/OpenSource';
 import Experience from './components/Experience';
 import Education  from './components/Education';
 import Contact    from './components/Contact';
 import Footer     from './components/Footer';
 
 const App: React.FC = () => {
-  // Keep theme toggle functional but default cinematic dark
-  const getInitialTheme = (): string => localStorage.getItem('theme') || 'dark';
-  const [theme, setTheme] = useState<string>(getInitialTheme);
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    document.body.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
-
   // Scroll-to-top
   const [showTop, setShowTop] = useState(false);
   useEffect(() => {
@@ -68,14 +57,15 @@ const App: React.FC = () => {
       {/* Stars background */}
       <div className="stars" aria-hidden="true" />
 
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbar />
 
       <main id="main-content">
         <Hero />
         <About />
-        <Skills />
         <Projects />
         <Experience />
+        <Skills />
+        <OpenSource />
         <Education />
         <Contact />
       </main>

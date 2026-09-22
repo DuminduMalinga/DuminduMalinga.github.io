@@ -1,0 +1,102 @@
+/* ====== OPEN SOURCE ====== */
+#opensource {
+  position: relative;
+  background: var(--bg-1);
+  overflow: hidden;
+}
+#opensource::before {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -150px;
+  width: 600px; height: 600px;
+  background: radial-gradient(ellipse, rgba(139,92,246,0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.os-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.os-header p { color: var(--gray-1); font-size: 16px; max-width: 500px; margin: 10px auto 0; }
+
+.os-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.os-stat-card {
+  padding: 20px 32px;
+  text-align: center;
+  min-width: 140px;
+}
+.os-stat-num {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--cyan);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.os-stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+}
+
+.os-repos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.os-repo-card {
+  padding: 26px 28px;
+  transition: var(--ease);
+}
+.os-repo-card:hover { transform: translateY(-4px); border-color: var(--border-bright); }
+.os-repo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.os-repo-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+.os-repo-icon { color: var(--gray-2); flex-shrink: 0; transition: var(--ease); }
+.os-repo-card:hover .os-repo-icon { color: var(--cyan); }
+.os-repo-desc {
+  font-size: 13.5px;
+  color: var(--gray-1);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.os-repo-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.os-repo-tag {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+  background: rgba(139,92,246,0.08);
+  border: 1px solid rgba(139,92,246,0.25);
+  color: var(--violet-2);
+  font-weight: 500;
+}
+
+.os-cta { text-align: center; }
+
+@media (max-width: 700px) {
+  .os-repos-grid { grid-template-columns: 1fr; }
+  .os-stats-row { gap: 12px; }
+  .os-stat-card { padding: 16px 24px; min-width: 110px; }
+}

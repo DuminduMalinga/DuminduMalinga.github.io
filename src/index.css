@@ -17,8 +17,8 @@
   --border:        rgba(0, 160, 255, 0.10);
   --border-bright: rgba(0, 200, 255, 0.30);
 
-  --cyan:    #00b8d9;
-  --cyan-2:  #00d4f5;
+  --cyan:    #2e6fff;
+  --cyan-2:  #5b8dff;
   --blue:    #0077b6;
   --blue-2:  #023e8a;
   --violet:  #8b5cf6;
@@ -28,10 +28,10 @@
   --gray-2:  #6c8ba5;
   --gray-3:  #1e3348;
 
-  --glow-cyan:  0 0 80px rgba(0,184,217,0.18);
+  --glow-cyan:  0 0 80px rgba(46,111,255,0.18);
   --glow-blue:  0 0 120px rgba(0,119,182,0.25);
   --glow-violet: 0 0 100px rgba(139,92,246,0.22);
-  --glow-sm:    0 0 30px rgba(0,184,217,0.20);
+  --glow-sm:    0 0 30px rgba(46,111,255,0.20);
 
   --font-display: 'Inter', sans-serif;
   --font-body:    'Inter', sans-serif;
@@ -73,7 +73,7 @@ button { font-family: inherit; cursor: pointer; }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg-0); }
 ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 2px; }
-::selection { background: rgba(0,184,217,0.25); }
+::selection { background: rgba(46,111,255,0.25); }
 
 /* ── Layout ── */
 .container {
@@ -126,7 +126,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ── Glow text ── */
 .glow-text {
   color: var(--white);
-  text-shadow: 0 0 80px rgba(0,184,217,0.5), 0 0 160px rgba(0,184,217,0.2);
+  text-shadow: 0 0 80px rgba(46,111,255,0.5), 0 0 160px rgba(46,111,255,0.2);
 }
 
 /* ── Buttons ── */
@@ -273,12 +273,12 @@ button { font-family: inherit; cursor: pointer; }
   background-image:
     radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.3) 0%, transparent 100%),
     radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.2) 0%, transparent 100%),
-    radial-gradient(1px 1px at 50% 10%, rgba(0,212,245,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 10%, rgba(91,141,255,0.4) 0%, transparent 100%),
     radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.25) 0%, transparent 100%),
-    radial-gradient(1px 1px at 85% 40%, rgba(0,184,217,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 40%, rgba(46,111,255,0.3) 0%, transparent 100%),
     radial-gradient(1px 1px at 20% 85%, rgba(255,255,255,0.2) 0%, transparent 100%),
     radial-gradient(1px 1px at 60% 50%, rgba(255,255,255,0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 90% 15%, rgba(0,212,245,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 15%, rgba(91,141,255,0.35) 0%, transparent 100%),
     radial-gradient(1px 1px at 45% 75%, rgba(255,255,255,0.2) 0%, transparent 100%),
-    radial-gradient(1px 1px at 75% 25%, rgba(0,184,217,0.25) 0%, transparent 100%);
+    radial-gradient(1px 1px at 75% 25%, rgba(46,111,255,0.25) 0%, transparent 100%);
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, type JSX } from 'react';
 import './about.css';
-import { aboutCards, aboutDetails } from '../data/portfolio';
+import { aboutCards, aboutDetails, aboutBadges } from '../data/portfolio';
 
 const About: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -13,7 +13,7 @@ const About: React.FC = () => {
   }, []);
 
   const iconColors = [
-    { bg: 'rgba(0,184,217,0.12)', color: '#00b8d9' },
+    { bg: 'rgba(46,111,255,0.12)', color: '#2e6fff' },
     { bg: 'rgba(120,80,250,0.12)', color: '#7858fa' },
     { bg: 'rgba(0,119,182,0.15)', color: '#0077b6' },
   ];
@@ -30,6 +30,11 @@ const About: React.FC = () => {
               <h2 className="about-section-title" id="about-heading">
                 Building software that <span className="cyan">solves real problems</span>
               </h2>
+            </div>
+            <div className="about-badges reveal">
+              {aboutBadges.map(b => (
+                <span key={b} className="about-badge">{b}</span>
+              ))}
             </div>
             <div className="reveal reveal-delay-1">
               <p className="about-body-text">

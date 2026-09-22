@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
   };
 
   const links = [
-    { label: 'Email', value: personal.email, href: `mailto:${personal.email}`, icon: <MailIcon />, bg: 'rgba(0,184,217,0.1)', color: '#00b8d9' },
+    { label: 'Email', value: personal.email, href: `mailto:${personal.email}`, icon: <MailIcon />, bg: 'rgba(46,111,255,0.1)', color: '#2e6fff' },
     { label: 'LinkedIn', value: 'dumindu-malinga', href: personal.linkedin, icon: <LinkedInIcon />, bg: 'rgba(10,102,194,0.1)', color: '#0a66c2' },
     { label: 'GitHub', value: 'github.com/DuminduMalinga', href: personal.github, icon: <GithubIcon />, bg: 'rgba(255,255,255,0.06)', color: '#f0f8ff' },
     { label: 'Phone', value: personal.phone, href: `tel:${personal.phone}`, icon: <PhoneIcon />, bg: 'rgba(0,200,100,0.08)', color: '#00c864' },
@@ -105,6 +105,28 @@ const Contact: React.FC = () => {
                   <div className="contact-link-arrow"><ArrowIcon /></div>
                 </a>
               ))}
+            </div>
+
+            <div className="availability-panel">
+              <p className="contact-links-title" style={{ fontSize: '14px', marginBottom: '14px' }}>Availability</p>
+              <div className="availability-grid">
+                <div className="availability-item">
+                  <span className="availability-label">Notice period</span>
+                  <span className="availability-value">Immediate</span>
+                </div>
+                <div className="availability-item">
+                  <span className="availability-label">Duration</span>
+                  <span className="availability-value">3–6 months, extendable</span>
+                </div>
+                <div className="availability-item">
+                  <span className="availability-label">Work mode</span>
+                  <span className="availability-value">On-site · Hybrid · Remote</span>
+                </div>
+                <div className="availability-item">
+                  <span className="availability-label">Languages</span>
+                  <span className="availability-value">English · Sinhala</span>
+                </div>
+              </div>
             </div>
           </div>
 

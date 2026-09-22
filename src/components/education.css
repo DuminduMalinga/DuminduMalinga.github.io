@@ -37,13 +37,13 @@
   position: absolute;
   top: 0; right: 0;
   width: 80px; height: 80px;
-  background: radial-gradient(circle at top right, rgba(0,184,217,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle at top right, rgba(46,111,255,0.06) 0%, transparent 70%);
 }
 
 .edu-icon {
   width: 56px; height: 56px;
   border-radius: var(--r-md);
-  background: rgba(0,184,217,0.08);
+  background: rgba(46,111,255,0.08);
   border: 1px solid var(--border);
   display: flex;
   align-items: center;

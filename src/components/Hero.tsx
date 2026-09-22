@@ -95,56 +95,10 @@ const Hero: React.FC = () => {
             <div className="hero-visual-wrap">
               <div className="hero-orb" aria-hidden="true" />
 
-              {/* Code card */}
-              <div className="hero-code-card">
-                <div className="code-card-header">
-                  <div className="code-dot code-dot-r" />
-                  <div className="code-dot code-dot-y" />
-                  <div className="code-dot code-dot-g" />
-                  <span className="code-card-title">MainActivity.java</span>
-                </div>
-                <div className="code-line">
-                  <span className="code-keyword">public class </span>
-                  <span className="code-class">MainActivity</span>
-                </div>
-                <div className="code-line code-indent">
-                  <span className="code-keyword">extends </span>
-                  <span className="code-cyan">AppCompatActivity</span>
-                </div>
-                <div className="code-line code-indent">
-                  <span className="code-comment">// Firebase + Room DB</span>
-                </div>
-                <div className="code-line code-indent">
-                  <span className="code-keyword">@Override </span>
-                  <span className="code-string">onCreate()</span>
-                </div>
-                <div className="code-line code-indent" style={{ paddingLeft: '40px' }}>
-                  <span className="code-cyan">syncWithFirebase</span>
-                  <span className="code-string">()</span>
-                </div>
-                <div className="code-bar" />
-              </div>
-
-              {/* Floating badges */}
-              <div className="hero-badge hero-badge-1">
-                <div className="pill-dot" />
-                <div>
-                  <div className="badge-num">{stats[0].number}</div>
-                  <div className="badge-label">{stats[0].label}</div>
-                </div>
-              </div>
-
-              <div className="hero-badge hero-badge-2">
-                <div className="pill-dot" />
-                <div>
-                  <div className="badge-num">{stats[1].number}</div>
-                  <div className="badge-label">{stats[1].label}</div>
-                </div>
-              </div>
-
-              <div className="hero-badge hero-badge-3">
-                <div className="pill-dot" />
-                <span>Open to hire</span>
+              {/* Photo */}
+              <div className="hero-photo-frame">
+                <img src="/dumindu-photo-bw.jpg" alt={personal.name} className="hero-photo-img" />
+                <div className="hero-photo-tint" aria-hidden="true" />
               </div>
             </div>
           </div>

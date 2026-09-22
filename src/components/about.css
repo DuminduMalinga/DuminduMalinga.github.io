@@ -40,6 +40,23 @@
   margin-bottom: 16px;
 }
 
+.about-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 24px;
+}
+.about-badge {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--white);
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  background: var(--glass);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
 .about-details {
   display: grid;
   grid-template-columns: 1fr 1fr;

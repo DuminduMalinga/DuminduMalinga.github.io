@@ -56,7 +56,7 @@
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--white);
-  background: rgba(0,184,217,0.08);
+  background: rgba(46,111,255,0.08);
 }
 
 .nav-actions {
@@ -64,19 +64,6 @@
   align-items: center;
   gap: 10px;
 }
-
-#theme-toggle {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: var(--glass);
-  border: 1px solid var(--border);
-  color: var(--gray-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--ease);
-}
-#theme-toggle:hover { border-color: var(--border-bright); color: var(--cyan); }
 
 .nav-cta { display: none; font-size: 13px; padding: 9px 20px; }
 @media (min-width: 900px) { .nav-cta { display: inline-flex; } }
