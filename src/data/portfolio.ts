@@ -146,112 +146,125 @@ export const monoLogos = ["github", "threejs", "materialdesign"];
 // ---- PROJECTS ----
 
 export interface Project {
-  emoji: string;
-  image: string;
-  gradient: string;
+  name: string;
+  category: string;
+  icon: string;
+  role: string;
+  year: string;
+  featured?: boolean;
+  desc: string;
   tags: string[];
   filterTags: string[];
-  title: string;
-  desc: string;
-  links: { label: string; icon: string; href: string }[];
+  sourceUrl: string;
+  previewImage?: string; // opens in a popup
+  liveUrl?: string; // opens the running site
+  note?: string;
 }
 
 export const projects: Project[] = [
   {
-    emoji: "🛋️",
-    image: "/projects/livispace.svg",
-    gradient: "linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%)",
+    name: "LiviSpace",
+    category: "Interior Design",
+    icon: "/app-icons/livispace.png",
+    role: "Flutter App",
+    year: "2026",
+    featured: true,
+    desc: "Turns a floor plan into AI-assisted interior designs: review detected rooms, compare layouts by match score and explore them in a 3D-style room viewer with GLB export and sharing.",
     tags: ["Flutter", "Dart", "Supabase", "REST"],
     filterTags: ["flutter"],
-    title: "LiviSpace — Interior Design App",
-    desc: "A cross-platform app that turns a floor plan into AI-assisted interior designs: upload a plan, review detected rooms and compare layout recommendations by match score. Includes a 3D-style room viewer with GLB export, plus Supabase accounts and storage.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Interior_Design_App" },
-    ],
+    sourceUrl: "https://github.com/DuminduMalinga/Interior_Design_App",
+    previewImage: "/projects/livispace.svg",
+    note: "Cross-platform Flutter app",
   },
   {
-    emoji: "🚆",
-    image: "/projects/ceylongo.svg",
-    gradient: "linear-gradient(135deg, #082f35 0%, #155e63 100%)",
+    name: "CeylonGO",
+    category: "Railway Companion",
+    icon: "/app-icons/ceylongo.png",
+    role: "Flutter App",
+    year: "2026",
+    desc: "Bilingual (English/Sinhala) train companion with journey search, stop-by-stop timelines, route maps and a searchable directory of 113 stations and 9 railway lines.",
     tags: ["Flutter", "Riverpod", "go_router", "Supabase", "flutter_map"],
     filterTags: ["flutter"],
-    title: "CeylonGO — Sri Lanka Railway Companion",
-    desc: "A bilingual (English/Sinhala) train companion with journey search, stop-by-stop timelines, route maps on OpenStreetMap and a searchable directory of 113 stations and 9 railway lines. Supports saved trains, guest mode and light/dark themes on a Supabase backend.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Lanka_Raill" },
-    ],
+    sourceUrl: "https://github.com/DuminduMalinga/Lanka_Raill",
+    previewImage: "/projects/ceylongo.svg",
+    note: "Guest mode available, sign-in is optional",
   },
   {
-    emoji: "🛍️",
-    image: "/projects/velora.svg",
-    gradient: "linear-gradient(135deg, #2a0a1f 0%, #831843 100%)",
+    name: "Velora",
+    category: "Shopping",
+    icon: "/app-icons/velora.png",
+    role: "Flutter App",
+    year: "2026",
+    desc: "Shopping app with a live paginated catalog, product reviews, a persistent wishlist and stock-aware bag, and sandbox checkout with duplicate-payment protection.",
     tags: ["Flutter", "Provider", "REST API", "PayHere SDK"],
     filterTags: ["flutter"],
-    title: "Velora — Shopping App",
-    desc: "A shopping app with a live paginated catalog, search, filters and product reviews, a persistent wishlist and stock-aware shopping bag, and PayHere Sandbox checkout with duplicate-payment protection. Includes unit tests for pricing and cart logic.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Velora" },
-    ],
+    sourceUrl: "https://github.com/DuminduMalinga/Velora",
+    previewImage: "/projects/velora.svg",
+    note: "Payments use PayHere Sandbox only",
   },
   {
-    emoji: "💰",
-    image: "/projects/finora.svg",
-    gradient: "linear-gradient(135deg, #052e16 0%, #14532d 100%)",
+    name: "Finora",
+    category: "Personal Finance",
+    icon: "/app-icons/finora.png",
+    role: "Flutter App",
+    year: "2026",
+    desc: "Expense tracker with monthly budgets, per-category limits, over-budget warnings, filterable history, report charts and local budget alerts.",
     tags: ["Flutter", "Dart", "SQLite", "Local Notifications"],
     filterTags: ["flutter"],
-    title: "Finora — Personal Expense Tracker",
-    desc: "An offline-first expense tracker with monthly budgets, per-category limits, over-budget warnings, filterable expense history, weekly and monthly report charts and budget alerts through local notifications.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Finora" },
-    ],
+    sourceUrl: "https://github.com/DuminduMalinga/Finora",
+    previewImage: "/projects/finora.svg",
+    note: "Offline-first, data stored in SQLite",
   },
   {
-    emoji: "🌤️",
-    image: "/projects/skycast.svg",
-    gradient: "linear-gradient(135deg, #0c1a2e 0%, #075985 100%)",
+    name: "SkyCast",
+    category: "Weather",
+    icon: "/app-icons/skycast.png",
+    role: "Flutter App",
+    year: "2026",
+    desc: "Weather app with live conditions, a 24-hour temperature chart, a 5-day forecast, city search with autocomplete, GPS location and saved cities.",
     tags: ["Flutter", "Dart", "WeatherAPI", "Geolocator"],
     filterTags: ["flutter"],
-    title: "SkyCast — Weather App",
-    desc: "A weather app with live conditions, a 24-hour temperature chart and a 5-day forecast. Offers city search with autocomplete, GPS location with an IP-based fallback, saved cities, themes and clear error states with retry.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Sky_Cast" },
-    ],
+    sourceUrl: "https://github.com/DuminduMalinga/Sky_Cast",
+    previewImage: "/projects/skycast.svg",
+    note: "Data from WeatherAPI and Open-Meteo",
   },
   {
-    emoji: "✅",
-    image: "/projects/taskflow.svg",
-    gradient: "linear-gradient(135deg, #2a1503 0%, #7c2d12 100%)",
+    name: "TaskFlow",
+    category: "Task Manager",
+    icon: "/app-icons/taskflow.png",
+    role: "Flutter App",
+    year: "2026",
+    desc: "Task manager (The Donezo) with due dates and times, categories, and active and completed views, backed by SQLite on native and SharedPreferences on web.",
     tags: ["Flutter", "Dart", "Provider", "SQLite"],
     filterTags: ["flutter"],
-    title: "TaskFlow (The Donezo) — Task Manager",
-    desc: "An offline-first task manager with due dates and times, categories, and active and completed views. Uses Provider for state, with SQLite on native platforms and SharedPreferences on web behind a storage abstraction.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/TaskFlow" },
-    ],
+    sourceUrl: "https://github.com/DuminduMalinga/TaskFlow",
+    previewImage: "/projects/taskflow.svg",
+    note: "Offline-first with a local profile",
   },
   {
-    emoji: "🏠",
-    image: "/projects/interiorai.svg",
-    gradient: "linear-gradient(135deg, #0c1a2e 0%, #1e3a5f 100%)",
+    name: "InteriorAI",
+    category: "Web Platform",
+    icon: "/app-icons/interiorai.png",
+    role: "Web App",
+    year: "2026",
+    desc: "Floor-plan-to-3D platform: detect rooms with YOLO and OCR, compare scored furniture layouts and explore them in a three.js view, backed by seven FastAPI services.",
     tags: ["React", "TypeScript", "FastAPI", "Supabase", "three.js"],
     filterTags: ["web"],
-    title: "InteriorAI — Interior Design Web Platform",
-    desc: "A floor-plan-to-3D platform: upload a 2D plan, detect rooms with YOLO and OCR, compare scored furniture layouts and explore them in a three.js view with PNG/GLB export. Backed by seven FastAPI services and Supabase auth with customer and admin roles.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Interior-Design-Web" },
-    ],
+    sourceUrl: "https://github.com/DuminduMalinga/Interior-Design-Web",
+    liveUrl: "https://interior-design-web-mu.vercel.app/",
+    note: "Web app deployed on Vercel",
   },
   {
-    emoji: "📝",
-    image: "/projects/personal-reflection.svg",
-    gradient: "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)",
+    name: "GoalReflect",
+    category: "Personal Growth",
+    icon: "/app-icons/goalreflect.svg",
+    role: "Team Lead",
+    year: "2026",
+    desc: "Native Android app for setting goals, writing reflections and tracking progress, with Room storage, Google Sign-In, scheduled reminders and weekly reports.",
     tags: ["Android", "Java", "Room DB", "Firebase Auth", "Glide"],
     filterTags: ["android"],
-    title: "GoalReflect — Personal Reflection App",
-    desc: "Led a 3-person team building a native Android app for setting goals, writing reflections and tracking progress. Uses Room (SQLite) storage, Firebase Authentication with Google Sign-In, and scheduled reminders and weekly progress reports.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Personal_Refelection" },
-    ],
+    sourceUrl: "https://github.com/DuminduMalinga/Personal_Refelection",
+    note: "Team project built by 3 people",
   },
 ];
 
