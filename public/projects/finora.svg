@@ -4,11 +4,13 @@
   <circle cx="530" cy="60" r="140" fill="#4ade80" opacity="0.14"/>
   <circle cx="90" cy="320" r="120" fill="#4ade80" opacity="0.10"/>
   <g font-family="Segoe UI, Arial, sans-serif">
+    <g transform="translate(0 20)">
     <text x="56" y="110" font-size="42" font-weight="700" fill="#f8fafc">Finora</text>
     <text x="58" y="140" font-size="15" fill="#cbd5e1">Personal expense tracker</text>
     <circle cx="64" cy="186" r="4" fill="#4ade80"/><text x="80" y="190" font-size="13" fill="#e2e8f0">Monthly budgets</text>
     <circle cx="64" cy="216" r="4" fill="#4ade80"/><text x="80" y="220" font-size="13" fill="#e2e8f0">Report charts</text>
     <circle cx="64" cy="246" r="4" fill="#4ade80"/><text x="80" y="250" font-size="13" fill="#e2e8f0">Budget alerts</text>
+    </g>
     <rect x="56" y="304" width="79" height="26" rx="13" fill="#4ade80"/><text x="95" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#052e16">Flutter</text>
     <rect x="143" y="304" width="58" height="26" rx="13" fill="#4ade80"/><text x="172" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#052e16">Dart</text>
     <rect x="209" y="304" width="72" height="26" rx="13" fill="#4ade80"/><text x="245" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#052e16">SQLite</text>

@@ -4,11 +4,13 @@
   <circle cx="530" cy="60" r="140" fill="#a78bfa" opacity="0.14"/>
   <circle cx="90" cy="320" r="120" fill="#a78bfa" opacity="0.10"/>
   <g font-family="Segoe UI, Arial, sans-serif">
+    <g transform="translate(0 20)">
     <text x="56" y="110" font-size="42" font-weight="700" fill="#f8fafc">LiviSpace</text>
     <text x="58" y="140" font-size="15" fill="#cbd5e1">Interior design app</text>
     <circle cx="64" cy="186" r="4" fill="#a78bfa"/><text x="80" y="190" font-size="13" fill="#e2e8f0">Floor-plan upload</text>
     <circle cx="64" cy="216" r="4" fill="#a78bfa"/><text x="80" y="220" font-size="13" fill="#e2e8f0">Room selection</text>
     <circle cx="64" cy="246" r="4" fill="#a78bfa"/><text x="80" y="250" font-size="13" fill="#e2e8f0">3D-style room viewer</text>
+    </g>
     <rect x="56" y="304" width="79" height="26" rx="13" fill="#a78bfa"/><text x="95" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#1e1b4b">Flutter</text>
     <rect x="143" y="304" width="58" height="26" rx="13" fill="#a78bfa"/><text x="172" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#1e1b4b">Dart</text>
     <rect x="209" y="304" width="86" height="26" rx="13" fill="#a78bfa"/><text x="252" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#1e1b4b">Supabase</text>

@@ -4,11 +4,11 @@ import { projects, projectFilters } from '../data/portfolio';
 
 const normalizeFilter = (value: string) => value.trim().toLowerCase();
 
-const PLATFORM_META: Record<string, { icon: string; label: string }> = {
-  flutter: { icon: '📱', label: 'Flutter' },
-  android: { icon: '🤖', label: 'Android' },
-  web: { icon: '🌐', label: 'Web' },
-  python: { icon: '🐍', label: 'Python' },
+// Logos live in public/tech/. The web badge uses React, which InteriorAI is built with.
+const PLATFORM_META: Record<string, { logo: string; label: string }> = {
+  flutter: { logo: 'flutter', label: 'Flutter' },
+  android: { logo: 'android', label: 'Android' },
+  web: { logo: 'react', label: 'Web' },
 };
 const getPlatform = (filterTags: string[]) => {
   const key = filterTags.find(t => PLATFORM_META[normalizeFilter(t)]);
@@ -68,7 +68,10 @@ const Projects: React.FC = () => {
                 <div className="project-thumb-bg" style={{ background: proj.gradient }} />
                 <img className="project-thumb-img" src={proj.image} alt={`${proj.title} preview`} loading="lazy" />
                 {platform && (
-                  <span className="project-platform">{platform.icon} {platform.label}</span>
+                  <span className="project-platform">
+                    <img src={`/tech/${platform.logo}.svg`} alt="" width={15} height={15} />
+                    {platform.label}
+                  </span>
                 )}
                 <div className="project-overlay">
                   {proj.links.map(link => (
