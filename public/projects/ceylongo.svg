@@ -1,0 +1,42 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CeylonGO Sri Lanka railway companion illustration">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse"><stop stop-color="#082f35"/><stop offset="1" stop-color="#155e63"/></linearGradient></defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <circle cx="530" cy="60" r="140" fill="#2dd4bf" opacity="0.14"/>
+  <circle cx="90" cy="320" r="120" fill="#2dd4bf" opacity="0.10"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="56" y="110" font-size="42" font-weight="700" fill="#f8fafc">CeylonGO</text>
+    <text x="58" y="140" font-size="15" fill="#cbd5e1">Sri Lanka railway companion</text>
+    <circle cx="64" cy="186" r="4" fill="#2dd4bf"/><text x="80" y="190" font-size="13" fill="#e2e8f0">Journey search</text>
+    <circle cx="64" cy="216" r="4" fill="#2dd4bf"/><text x="80" y="220" font-size="13" fill="#e2e8f0">Route maps</text>
+    <circle cx="64" cy="246" r="4" fill="#2dd4bf"/><text x="80" y="250" font-size="13" fill="#e2e8f0">English / Sinhala</text>
+    <rect x="56" y="304" width="79" height="26" rx="13" fill="#2dd4bf"/><text x="95" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#082f35">Flutter</text>
+    <rect x="143" y="304" width="86" height="26" rx="13" fill="#2dd4bf"/><text x="186" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#082f35">Riverpod</text>
+    <rect x="237" y="304" width="86" height="26" rx="13" fill="#2dd4bf"/><text x="280" y="321" text-anchor="middle" font-size="11" font-weight="600" fill="#082f35">Supabase</text>
+  </g>
+  <rect x="418" y="29" width="143" height="302" rx="24" fill="#020617" stroke="#ffffff" stroke-opacity="0.18"/>
+  <clipPath id="screen"><rect x="425" y="36" width="129" height="288" rx="17"/></clipPath>
+  <!-- Splash screen, redrawn from the app's splash_screen.dart -->
+  <g clip-path="url(#screen)">
+  <svg x="425" y="36" width="129" height="288" viewBox="0 0 390 871" preserveAspectRatio="xMidYMid slice" font-family="Plus Jakarta Sans, Inter, Segoe UI, Arial, sans-serif">
+    <defs>
+      <radialGradient id="g1" cx="0" cy="105" r="328" gradientUnits="userSpaceOnUse"><stop stop-color="#2EBE7A" stop-opacity="0.85"/><stop offset="1" stop-color="#2EBE7A" stop-opacity="0"/></radialGradient>
+      <radialGradient id="g2" cx="390" cy="0" r="312" gradientUnits="userSpaceOnUse"><stop stop-color="#5A5C60" stop-opacity="0.75"/><stop offset="1" stop-color="#5A5C60" stop-opacity="0"/></radialGradient>
+      <radialGradient id="g3" cx="332" cy="871" r="351" gradientUnits="userSpaceOnUse"><stop stop-color="#2EBE7A" stop-opacity="0.8"/><stop offset="1" stop-color="#2EBE7A" stop-opacity="0"/></radialGradient>
+      <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1D201F"/><stop offset="0.38" stop-color="#1F2A25"/><stop offset="0.72" stop-color="#2C8A60"/><stop offset="1" stop-color="#43F0A2"/></linearGradient>
+      <radialGradient id="core" cx="0.5" cy="0.38" r="0.72"><stop stop-color="#1D201F"/><stop offset="0.5" stop-color="#1D201F"/><stop offset="1" stop-color="#1D201F" stop-opacity="0"/></radialGradient>
+      <radialGradient id="halo" cx="195" cy="329" r="150" gradientUnits="userSpaceOnUse"><stop stop-color="#3EE89B" stop-opacity="0.28"/><stop offset="1" stop-color="#3EE89B" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="390" height="871" fill="#1E2020"/>
+    <rect width="390" height="871" fill="url(#g1)"/><rect width="390" height="871" fill="url(#g2)"/><rect width="390" height="871" fill="url(#g3)"/>
+    <circle cx="195" cy="329" r="150" fill="url(#halo)"/>
+    <rect x="120" y="239" width="150" height="150" rx="36" fill="url(#tile)"/>
+    <rect x="120" y="239" width="150" height="150" rx="36" fill="url(#core)"/>
+    <g transform="translate(139.5 258.5) scale(1.11)"><path fill="#FFFFFF" fill-rule="evenodd" d="M8 41 L60 33 C73 31.5 82 39 84.5 51 L86 61 C86.6 66 83 69.5 77.5 69.5 L13 61 C10 60.6 8.5 58 9.6 55.5 Z M64.5 37.6 C72 37.4 77.4 43.5 79 52.5 L79.6 56.6 L71 56.2 C70 48 67.6 42.2 64.5 37.6 Z M45 39.5 L58.6 37.8 C61.6 41.4 63.3 46 64 51 L45.6 49.6 Z M19 54.2 L70 59.5 L69.6 62.3 L18.6 56.8 Z"/><g fill="#1D201F"><rect x="16" y="43.4" width="2.4" height="5.2" rx="1"/><rect x="23" y="43.2" width="2.4" height="5.2" rx="1"/><rect x="30" y="42.9" width="2.4" height="5.2" rx="1"/><rect x="37" y="42.7" width="2.4" height="5.2" rx="1"/></g><circle cx="80.5" cy="64" r="2.4" fill="#3EE89B"/><path fill="#FFFFFF" d="M10 70.5 L90 77.5 L90 80 L10 72.5 Z"/><path fill="#FFFFFF" fill-opacity="0.7" d="M24 77 L86 83 L86 85 L24 78.6 Z"/></g>
+    <text x="195" y="455" text-anchor="middle" font-size="40" font-weight="800" fill="#FFFFFF">CeylonGO</text>
+    <text x="195" y="489" text-anchor="middle" font-size="15" fill="#C9D2CD">Explore Sri Lanka. Travel by Train.</text>
+    <rect x="171" y="772" width="24" height="6" rx="3" fill="#3EE89B"/><circle cx="204" cy="775" r="3" fill="#FFFFFF" opacity="0.35"/><circle cx="216" cy="775" r="3" fill="#FFFFFF" opacity="0.35"/>
+    <rect x="70" y="792" width="250" height="31" rx="15.5" fill="#141616" fill-opacity="0.55" stroke="#3EE89B" stroke-opacity="0.45"/>
+    <text x="195" y="812" text-anchor="middle" font-size="11" font-weight="600" letter-spacing="0.88" fill="#3EE89B">SRI LANKA RAILWAY COMPANION</text>
+  </svg>
+  </g>
+</svg>

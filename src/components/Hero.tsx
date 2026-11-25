@@ -1,12 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import './hero.css';
-import { personal, roles, stats } from '../data/portfolio';
+import { personal, roles, skillGroups, projectCountFallback } from '../data/portfolio';
+
+const GITHUB_USER = personal.github.split('/').pop() ?? '';
+const GITHUB_REPOS_URL = `https://api.github.com/users/${GITHUB_USER}/repos?per_page=100`;
+// The profile README and this portfolio aren't counted as projects
+const NOT_PROJECTS = [GITHUB_USER, `${GITHUB_USER}.github.io`].map(n => n.toLowerCase());
+
+// Unique entries across the Skills section (some appear in two categories),
+// rounded down to the nearest 5 so the "+" stays true
+const technologyCount = Math.floor(new Set(skillGroups.flatMap(g => g.tags)).size / 5) * 5;
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
   const [roleIdx, setRoleIdx]     = useState(0);
   const [charIdx, setCharIdx]     = useState(0);
   const [deleting, setDeleting]   = useState(false);
+  const [projectCount, setProjectCount] = useState(projectCountFallback);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(GITHUB_REPOS_URL, { signal: controller.signal })
+      .then(res => (res.ok ? res.json() : Promise.reject(new Error(`GitHub ${res.status}`))))
+      .then((repos: { name: string; fork: boolean }[]) => {
+        const own = repos.filter(r => !r.fork && !NOT_PROJECTS.includes(r.name.toLowerCase()));
+        if (own.length > 0) setProjectCount(own.length);
+      })
+      .catch(() => { /* offline or rate-limited: keep the fallback value */ });
+    return () => controller.abort();
+  }, []);
+
+  const stats = [
+    { number: `${projectCount}+`, label: 'Projects Built' },
+    { number: `${technologyCount}+`, label: 'Technologies' },
+    { number: 'IT', label: 'Undergraduate' },
+  ];
 
   useEffect(() => {
     const current = roles[roleIdx];

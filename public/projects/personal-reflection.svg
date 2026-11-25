@@ -76,8 +76,8 @@
     <rect x="0" y="0" width="150" height="40" rx="12" fill="#0b1027" stroke="#00b8d9" stroke-opacity="0.35" stroke-width="1.5"/>
     <path d="M20 30l6-22 8 12 6-10 8 20z" fill="#ffca28"/>
     <path d="M20 30l28 0 -8-20z" fill="#ffa000" opacity="0.9"/>
-    <text x="56" y="18" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700" fill="#e2e8f0">Firebase sync</text>
-    <text x="56" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#94a3d4">Multi-device</text>
+    <text x="56" y="18" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="700" fill="#e2e8f0">Local storage</text>
+    <text x="56" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#94a3d4">Room (SQLite)</text>
   </g>
 
   <!-- tag chips -->

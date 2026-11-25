@@ -1,30 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import './skills.css';
-import { skillGroups, techTags } from '../data/portfolio';
+import { skillGroups, techLogos, monoLogos } from '../data/portfolio';
 
 const Skills: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const barsAnimated = useRef(false);
 
   useEffect(() => {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.1 });
     sectionRef.current?.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-    const skillObs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !barsAnimated.current) {
-          barsAnimated.current = true;
-          sectionRef.current?.querySelectorAll<HTMLElement>('.skill-fill').forEach(bar => {
-            const pct = bar.getAttribute('data-width') || '0';
-            setTimeout(() => { bar.style.width = `${pct}%`; }, 200);
-          });
-        }
-      });
-    }, { threshold: 0.2 });
-    if (sectionRef.current) skillObs.observe(sectionRef.current);
-    return () => { obs.disconnect(); skillObs.disconnect(); };
+    return () => obs.disconnect();
   }, []);
 
   return (
@@ -40,34 +26,33 @@ const Skills: React.FC = () => {
 
         <div className="skills-grid">
           {skillGroups.map((group, gi) => (
-            <div key={group.title} className={`skill-panel glass-card reveal reveal-delay-${gi + 1}${gi === 1 ? ' skill-panel-alt' : ''}`}>
+            <div key={group.title} className={`skill-panel glass-card reveal reveal-delay-${(gi % 2) + 1}`}>
               <div className="skill-panel-header">
-                <div className="skill-panel-icon">{group.emoji}</div>
-                <p className="skill-panel-title">{group.title}</p>
+                <div className="skill-panel-icon" aria-hidden="true">{group.emoji}</div>
+                <h3 className="skill-panel-title">{group.title}</h3>
               </div>
-              {group.bars?.map(bar => (
-                <div key={bar.name} className="skill-item">
-                  <div className="skill-meta">
-                    <span className="skill-name">{bar.name}</span>
-                    <span className="skill-pct">{bar.pct}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-fill" data-width={bar.pct} />
-                  </div>
-                </div>
-              ))}
+              <ul className="tech-grid">
+                {group.tags.map(tag => {
+                  const logo = techLogos[tag];
+                  return (
+                    <li key={tag} className="tech-chip">
+                      {logo && (
+                        <img
+                          className={`tech-logo${monoLogos.includes(logo) ? ' tech-logo-mono' : ''}`}
+                          src={`/tech/${logo}.svg`}
+                          alt=""
+                          width={18}
+                          height={18}
+                          loading="lazy"
+                        />
+                      )}
+                      {tag}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           ))}
-
-          <div className="tech-panel glass-card reveal">
-            <div className="skill-panel-header">
-              <div className="skill-panel-icon">🛠️</div>
-              <p className="skill-panel-title">Tools &amp; Frameworks</p>
-            </div>
-            <div className="tech-grid">
-              {techTags.map(tag => <span key={tag} className="tech-chip">{tag}</span>)}
-            </div>
-          </div>
         </div>
       </div>
     </section>

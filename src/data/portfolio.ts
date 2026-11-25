@@ -3,7 +3,7 @@
 export const personal = {
   name: "Dumindu Malinga",
   initials: "DM",
-  logo: "DM.dev",
+  logo: "DM",
   tagline: "Available for Internships & Opportunities",
   bio: "Third-year undergraduate and intern mobile app developer with hands-on experience building and shipping Flutter/Dart apps backed by Firebase authentication and real-time data. I turn ideas into clean, functional, cross-platform experiences.",
   location: "Sri Lanka 🇱🇰",
@@ -26,11 +26,10 @@ export const roles = [
   "Problem Solver",
 ];
 
-export const stats = [
-  { number: "8+", label: "Projects Built" },
-  { number: "12+", label: "Technologies" },
-  { number: "SE", label: "Undergraduate" },
-];
+// Your own public GitHub repos, not counting forks, the profile README repo or
+// this portfolio. The hero loads the live count; this is the backup value
+// (last checked 2026-11-26).
+export const projectCountFallback = 16;
 
 export const aboutCards = [
   {
@@ -62,7 +61,7 @@ export const aboutDetails = [
 
 export const aboutBadges = [
   "🎓 3rd-Year IT Undergraduate",
-  "📱 8+ Mobile & Web Projects Shipped",
+  `📱 ${projectCountFallback}+ Projects on GitHub`,
   "🟢 Open to Internships",
   "💼 Immediate Availability",
   "🌍 Sri Lanka · Remote-friendly",
@@ -70,67 +69,79 @@ export const aboutBadges = [
 
 // ---- SKILLS ----
 
-export interface SkillBar {
-  name: string;
-  pct: number;
-}
-
 export interface SkillGroup {
   title: string;
   emoji: string;
-  bars?: SkillBar[];
-  tags?: string[];
+  tags: string[];
 }
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Flutter & Mobile",
+    title: "Mobile App Development",
     emoji: "📱",
-    bars: [
-      { name: "Flutter", pct: 88 },
-      { name: "Dart", pct: 85 },
-      { name: "Firebase Auth & Firestore", pct: 82 },
-      { name: "Android (Java)", pct: 75 },
-      { name: "State Management", pct: 78 },
-      { name: "Responsive & Adaptive UI", pct: 80 },
-    ],
+    tags: ["Flutter", "Dart", "Android (Java)", "Provider", "Riverpod", "go_router", "Responsive & Adaptive UI", "Material 3"],
   },
   {
-    title: "Languages & Web",
+    title: "Programming Languages",
     emoji: "💻",
-    bars: [
-      { name: "React / TypeScript", pct: 70 },
-      { name: "SQL & SQLite", pct: 78 },
-      { name: "HTML & CSS", pct: 75 },
-      { name: "Python", pct: 72 },
-      { name: "Git & GitHub", pct: 82 },
-      { name: "Software Eng. Principles", pct: 80 },
-    ],
+    tags: ["Dart", "Java", "JavaScript", "TypeScript", "Python", "SQL", "C/C++"],
+  },
+  {
+    title: "Web Development",
+    emoji: "🌐",
+    tags: ["HTML5", "CSS3", "React", "TypeScript", "Vite", "Tailwind CSS", "three.js"],
+  },
+  {
+    title: "Databases",
+    emoji: "🗃️",
+    tags: ["SQLite (sqflite)", "Room", "PostgreSQL", "MySQL", "SharedPreferences", "Firebase Firestore"],
+  },
+  {
+    title: "Backend & Cloud",
+    emoji: "☁️",
+    tags: ["Supabase (Auth, Postgres, Storage)", "REST APIs", "FastAPI (basics)", "Firebase Authentication"],
+  },
+  {
+    title: "Tools & Practices",
+    emoji: "🛠️",
+    tags: ["Git", "GitHub", "VS Code", "Android Studio", "Figma", "Agile/Scrum (basics)"],
   },
 ];
 
-export const techTags = [
-  "🐦 Flutter",
-  "🎯 Dart",
-  "🔥 Firebase",
-  "☁️ Cloud Firestore",
-  "🤖 Android Studio",
-  "☕ Java",
-  "🗃️ Room DB",
-  "📦 SQLite",
-  "🐍 Python",
-  "🌐 HTML5",
-  "🎨 CSS3",
-  "⚡ JavaScript",
-  "📘 TypeScript",
-  "⚛️ React",
-  "⚡ Vite",
-  "🚀 Express.js",
-  "🗄️ Supabase",
-  "🐙 Git & GitHub",
-  "📱 Material Design",
-  "📊 ML / YOLOv8",
-];
+// Official logos in public/tech/ (Devicon; Material Design from Simple Icons).
+// Tags without an entry have no logo in those sets or aren't a single product.
+export const techLogos: Record<string, string> = {
+  "Flutter": "flutter",
+  "Dart": "dart",
+  "Android (Java)": "android",
+  "Material 3": "materialdesign",
+  "Java": "java",
+  "JavaScript": "javascript",
+  "TypeScript": "typescript",
+  "Python": "python",
+  "C/C++": "cplusplus",
+  "HTML5": "html5",
+  "CSS3": "css3",
+  "React": "react",
+  "Vite": "vitejs",
+  "Tailwind CSS": "tailwindcss",
+  "three.js": "threejs",
+  "SQLite (sqflite)": "sqlite",
+  "PostgreSQL": "postgresql",
+  "MySQL": "mysql",
+  "Firebase Firestore": "firebase",
+  "Firebase Authentication": "firebase",
+  "Supabase (Auth, Postgres, Storage)": "supabase",
+  "FastAPI (basics)": "fastapi",
+  "Git": "git",
+  "GitHub": "github",
+  "VS Code": "vscode",
+  "Android Studio": "androidstudio",
+  "Figma": "figma",
+};
+
+// Logos that are black originally, shown in white on the dark theme
+export const monoLogos = ["github", "threejs", "materialdesign"];
 
 // ---- PROJECTS ----
 
@@ -147,99 +158,99 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    emoji: "💰",
-    image: "/projects/wealthwise.svg",
-    gradient: "linear-gradient(135deg, #052e16 0%, #14532d 100%)",
-    tags: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore"],
-    filterTags: ["flutter", "firebase"],
-    title: "WealthWise — Personal Finance Tracker",
-    desc: "A personal finance management app for tracking income, expenses, and budgets in real time, with Firebase Authentication and Firestore integration behind a clean, responsive Flutter UI.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/WealthWise" },
-    ],
-  },
-  {
     emoji: "🛋️",
     image: "/projects/livispace.svg",
     gradient: "linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%)",
-    tags: ["Flutter", "Dart", "UI/UX"],
+    tags: ["Flutter", "Dart", "Supabase", "REST"],
     filterTags: ["flutter"],
     title: "LiviSpace — Interior Design App",
-    desc: "A 9-screen AI-assisted interior design prototype covering auth, floor-plan upload, mock AI processing, room selection, and layout recommendations, structured into modular, dark-themed screen components.",
+    desc: "A cross-platform app that turns a floor plan into AI-assisted interior designs: upload a plan, review detected rooms and compare layout recommendations by match score. Includes a 3D-style room viewer with GLB export, plus Supabase accounts and storage.",
     links: [
       { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Interior_Design_App" },
+    ],
+  },
+  {
+    emoji: "🚆",
+    image: "/projects/ceylongo.svg",
+    gradient: "linear-gradient(135deg, #082f35 0%, #155e63 100%)",
+    tags: ["Flutter", "Riverpod", "go_router", "Supabase", "flutter_map"],
+    filterTags: ["flutter"],
+    title: "CeylonGO — Sri Lanka Railway Companion",
+    desc: "A bilingual (English/Sinhala) train companion with journey search, stop-by-stop timelines, route maps on OpenStreetMap and a searchable directory of 113 stations and 9 railway lines. Supports saved trains, guest mode and light/dark themes on a Supabase backend.",
+    links: [
+      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Lanka_Raill" },
+    ],
+  },
+  {
+    emoji: "🛍️",
+    image: "/projects/velora.svg",
+    gradient: "linear-gradient(135deg, #2a0a1f 0%, #831843 100%)",
+    tags: ["Flutter", "Provider", "REST API", "PayHere SDK"],
+    filterTags: ["flutter"],
+    title: "Velora — Shopping App",
+    desc: "A shopping app with a live paginated catalog, search, filters and product reviews, a persistent wishlist and stock-aware shopping bag, and PayHere Sandbox checkout with duplicate-payment protection. Includes unit tests for pricing and cart logic.",
+    links: [
+      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Velora" },
+    ],
+  },
+  {
+    emoji: "💰",
+    image: "/projects/finora.svg",
+    gradient: "linear-gradient(135deg, #052e16 0%, #14532d 100%)",
+    tags: ["Flutter", "Dart", "SQLite", "Local Notifications"],
+    filterTags: ["flutter"],
+    title: "Finora — Personal Expense Tracker",
+    desc: "An offline-first expense tracker with monthly budgets, per-category limits, over-budget warnings, filterable expense history, weekly and monthly report charts and budget alerts through local notifications.",
+    links: [
+      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Finora" },
+    ],
+  },
+  {
+    emoji: "🌤️",
+    image: "/projects/skycast.svg",
+    gradient: "linear-gradient(135deg, #0c1a2e 0%, #075985 100%)",
+    tags: ["Flutter", "Dart", "WeatherAPI", "Geolocator"],
+    filterTags: ["flutter"],
+    title: "SkyCast — Weather App",
+    desc: "A weather app with live conditions, a 24-hour temperature chart and a 5-day forecast. Offers city search with autocomplete, GPS location with an IP-based fallback, saved cities, themes and clear error states with retry.",
+    links: [
+      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Sky_Cast" },
+    ],
+  },
+  {
+    emoji: "✅",
+    image: "/projects/taskflow.svg",
+    gradient: "linear-gradient(135deg, #2a1503 0%, #7c2d12 100%)",
+    tags: ["Flutter", "Dart", "Provider", "SQLite"],
+    filterTags: ["flutter"],
+    title: "TaskFlow (The Donezo) — Task Manager",
+    desc: "An offline-first task manager with due dates and times, categories, and active and completed views. Uses Provider for state, with SQLite on native platforms and SharedPreferences on web behind a storage abstraction.",
+    links: [
+      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/TaskFlow" },
     ],
   },
   {
     emoji: "🏠",
     image: "/projects/interiorai.svg",
     gradient: "linear-gradient(135deg, #0c1a2e 0%, #1e3a5f 100%)",
-    tags: ["React", "TypeScript", "Express", "Supabase"],
+    tags: ["React", "TypeScript", "FastAPI", "Supabase", "three.js"],
     filterTags: ["web"],
-    title: "InteriorAI — Interior Design Platform",
-    desc: "A full-stack floor-plan-to-3D design platform: a 12-page React/TypeScript frontend and an Express REST API secured with Helmet, CORS, and rate limiting, with Supabase auth, storage, and admin management.",
+    title: "InteriorAI — Interior Design Web Platform",
+    desc: "A floor-plan-to-3D platform: upload a 2D plan, detect rooms with YOLO and OCR, compare scored furniture layouts and explore them in a three.js view with PNG/GLB export. Backed by seven FastAPI services and Supabase auth with customer and admin roles.",
     links: [
       { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Interior-Design-Web" },
-    ],
-  },
-  {
-    emoji: "🎶",
-    image: "/projects/video-player.svg",
-    gradient: "linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)",
-    tags: ["Flutter", "Dart", "Media Playback"],
-    filterTags: ["flutter"],
-    title: "Video Player",
-    desc: "A local video player app built with Flutter, featuring folder-based playlist auto-loading, seek/fast-forward/rewind controls, mute toggle, and automatic advance to the next video on playback completion.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Video_Player" },
-    ],
-  },
-  {
-    emoji: "🎵",
-    image: "/projects/audio-player.svg",
-    gradient: "linear-gradient(135deg, #042f2e 0%, #0f766e 100%)",
-    tags: ["Flutter", "Dart", "Audio", "Cross-platform"],
-    filterTags: ["flutter"],
-    title: "Audio Player",
-    desc: "A cross-platform Flutter audio player for local music. Includes playback and seek controls, playlist and favorites management, audio recording, real-time waveform visualization, and live pitch/speed sound-effect presets.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Audio_player" },
     ],
   },
   {
     emoji: "📝",
     image: "/projects/personal-reflection.svg",
     gradient: "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)",
-    tags: ["Android", "Java", "Room DB", "Firebase"],
-    filterTags: ["android", "firebase"],
-    title: "Personal Reflection App",
-    desc: "A native Android journaling app with Firebase-backed cloud data sync. Led a 3-person team building GoalReflect, a goal-tracking and reflection app with Room (SQLite) persistence, Google Sign-In, and a 5-channel reminder system.",
+    tags: ["Android", "Java", "Room DB", "Firebase Auth", "Glide"],
+    filterTags: ["android"],
+    title: "GoalReflect — Personal Reflection App",
+    desc: "Led a 3-person team building a native Android app for setting goals, writing reflections and tracking progress. Uses Room (SQLite) storage, Firebase Authentication with Google Sign-In, and scheduled reminders and weekly progress reports.",
     links: [
       { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Personal_Refelection" },
-    ],
-  },
-  {
-    emoji: "🚗",
-    image: "/projects/vehicle-classification.svg",
-    gradient: "linear-gradient(135deg, #1a0a2e 0%, #3b1170 100%)",
-    tags: ["Python", "YOLOv8", "Machine Learning"],
-    filterTags: ["python"],
-    title: "Vehicle Classification Model",
-    desc: "Fine-tuned a YOLOv8 model on a custom-labeled dataset to detect and classify four vehicle types: car, bus, truck, and motorcycle.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Vehicle_Classification" },
-    ],
-  },
-  {
-    emoji: "🌱",
-    image: "/projects/plant-growth.svg",
-    gradient: "linear-gradient(135deg, #14210f 0%, #365314 100%)",
-    tags: ["Python", "OpenCV", "Data Science"],
-    filterTags: ["python"],
-    title: "Plant Growth Analyzer",
-    desc: "A data analysis project using OpenCV-based image processing (HSV segmentation and contour detection) to measure plant height, leaf count, and health from daily photo captures.",
-    links: [
-      { label: "Source Code", icon: "github", href: "https://github.com/DuminduMalinga/Plant_Growth" },
     ],
   },
 ];
@@ -249,39 +260,17 @@ export const projectFilters = [
   { label: "Flutter", value: "flutter" },
   { label: "Android", value: "android" },
   { label: "Web", value: "web" },
-  { label: "Python", value: "python" },
-  { label: "Firebase", value: "firebase" },
 ];
 
 // ---- OPEN SOURCE ----
 
-export const githubStats = [
-  { number: "13", label: "Public Repos" },
-  { number: "5", label: "Followers" },
-  { number: "2+", label: "Years on GitHub" },
-];
-
-export interface OpenSourceRepo {
-  name: string;
-  desc: string;
-  tags: string[];
-  href: string;
-}
-
-export const openSourceRepos: OpenSourceRepo[] = [
-  {
-    name: "SkillBridge",
-    desc: "A university pilot platform (Rajarata University, Faculty of Applied Sciences) connecting student coursework with real industry requirements and project experience. React + TypeScript, Vite, Tailwind CSS v4, with separate student/company/institute dashboards.",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    href: "https://github.com/DuminduMalinga/Skill_Bridge",
-  },
-  {
-    name: "Virtusa Computers — E-Commerce Web",
-    desc: "A 30-product tech retail storefront built with zero frameworks — vanilla HTML/CSS/JS. Live search, category filters, cart with localStorage persistence, and a full multi-step checkout flow.",
-    tags: ["HTML5", "CSS3", "Vanilla JS"],
-    href: "https://github.com/DuminduMalinga/E-commerce_web",
-  },
-];
+// The Open Source section loads live numbers from GitHub. These values are
+// shown while loading, or if GitHub can't be reached (last checked 2026-11-26).
+export const githubFallback = {
+  publicRepos: 19,
+  followers: 6,
+  createdAt: "2023-11-29T06:50:58Z",
+};
 
 // ---- EXPERIENCE ----
 
@@ -300,9 +289,9 @@ export const timeline: TimelineItem[] = [
     date: "2023 – Present",
     color: "violet",
     bullets: [
-      "Built WealthWise, a personal finance tracker with Firebase Authentication and real-time Cloud Firestore sync.",
-      "Developed LiviSpace, a 9-screen AI-assisted interior design prototype with a modular, dark-themed UI.",
-      "Shipped a cross-platform Video Player and Audio Player in Flutter, including waveform visualization and playback FX.",
+      "Built CeylonGO, a bilingual Sri Lanka railway companion using Riverpod, go_router and Supabase.",
+      "Developed LiviSpace, an AI-assisted interior design app with a 3D-style room viewer and Supabase accounts.",
+      "Built Velora, Finora, SkyCast and TaskFlow, covering REST APIs, SQLite and Provider state management.",
       "Applied Agile methodology and version control (Git) across all projects.",
     ],
   },
@@ -312,7 +301,7 @@ export const timeline: TimelineItem[] = [
     date: "2022 – Present",
     color: "purple",
     bullets: [
-      "Built InteriorAI, a full-stack React/TypeScript + Express platform with a Supabase-backed REST API.",
+      "Built InteriorAI, a floor-plan-to-3D platform with React/TypeScript, FastAPI services and Supabase.",
       "Studied Firebase Authentication, Firestore, and Realtime Database integration across mobile and web apps.",
       "Practised UI/UX design principles using Material Design 3 guidelines.",
       "Built native Android apps with Java, Room, and SQLite for local persistence.",

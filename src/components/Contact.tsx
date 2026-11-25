@@ -131,7 +131,8 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Right: form */}
-          <div className="reveal reveal-delay-1">
+          <div className="contact-form-col reveal reveal-delay-1">
+            <p className="contact-links-title">Send a message</p>
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
               <div className="form-row">
                 <div className="form-group">
@@ -147,7 +148,7 @@ const Contact: React.FC = () => {
                 <label className="form-label" htmlFor="form-subject">Subject</label>
                 <input className="form-input" type="text" id="form-subject" placeholder="Internship / Collaboration" value={form.subject} onChange={e => setForm(f => ({ ...f, subject: e.target.value }))} />
               </div>
-              <div className="form-group">
+              <div className="form-group form-group-message">
                 <label className="form-label" htmlFor="form-message">Message <span className="req">*</span></label>
                 <textarea className="form-textarea" id="form-message" placeholder="Tell me about your opportunity..." value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} />
               </div>

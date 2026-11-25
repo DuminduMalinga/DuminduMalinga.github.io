@@ -62,7 +62,7 @@
       <text x="69" y="108" text-anchor="middle" font-size="9" font-weight="700" fill="#0a1526">Generate 3D</text>
     </g>
 
-    <text x="16" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#93c5fd">Express REST API &#183; Helmet &#183; CORS &#183; rate limiting &#183; Supabase auth</text>
+    <text x="16" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#93c5fd">FastAPI services &#183; YOLO + OCR &#183; three.js &#183; Supabase auth</text>
   </g>
 
   <!-- tag chips -->
